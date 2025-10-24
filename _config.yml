@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: "NBA Player Trajectory Prediction"
+description: "A CS4641 machine learning project showcase."
+baseurl: "/pages/xliang304/CS4641-Project-Team"
+url: "https://github.gatech.edu"
