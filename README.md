@@ -6,6 +6,18 @@
 
 ---
 
+## Overview
+
+Predicting long-term NBA player success is one of the most consequential — and difficult — decisions a franchise faces. This project uses machine learning to forecast **how many All-Star appearances an NBA player will earn over their career**, based solely on their statistics from their rookie contract (Years 1–4).
+
+### Why This Matters
+General managers routinely face high-stakes contract extension decisions with limited signal. Early indicators like draft position and college stats offer some guidance, but teams consistently struggle to accurately project long-term potential. Traditional approaches apply a one-size-fits-all model to player assessment — our project improves on this by exploring **position-based feature weighting** (e.g., assists matter more for guards than centers) and accounting for **evolving league trends** like the rise of three-point shooting and faster pace of play.
+
+### Data
+We collected statistics for **249 NBA players** drafted between 2005–2020. For each player, we tracked Years 1–4 games played, games started, MPG, FG%, 3P%, FT%, RPG, APG, SPG, BPG, and PPG — along with their total All-Star appearances by Year 4. The dataset includes all 80 players from that era with at least one All-Star selection, the four legends above, and 165 randomly sampled players.
+
+---
+
 ## 📂 Repository Structure
 
 ### Data
