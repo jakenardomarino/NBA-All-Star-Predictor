@@ -65,3 +65,21 @@ Located in the `/visualization` folder.
 #### Performance Comparison
 * `mse_piechart.png`: Model with best MSE across all test sizes and top 9 features.
 * `r2_piechart.png`: Model with best R² across all test sizes and top 9 features.
+
+---
+
+## Results
+
+We evaluated three models — **Linear Regression**, **Decision Tree**, and **KNN Regression** — using RMSE and R² as our primary metrics (rather than F1-score, since this is a regression problem rather than a classification one).
+
+| Model | RMSE | R² |
+| :--- | :---: | :---: |
+| Linear Regression | 1.456 | 0.833 |
+| KNN Regression | 1.334 | 0.860 |
+| Decision Tree | 0.988 | 0.923 |
+
+The **Decision Tree** model performed best overall, achieving an R² of 0.923 — meaning it explains over 92% of the variance in All-Star appearances. Linear Regression served as our midterm benchmark, and both the Decision Tree and KNN models improved upon it meaningfully.
+
+To stress-test these results, we ran an exhaustive comparison across every train-test split between 0.05–0.20, every non-empty subset of the 9 most common features, and 2–5 neighbors/depth for KNN and Decision Tree respectively. Across this search, no single model dominated — the Decision Tree had the best MSE ~37.7% of the time, KNN ~33.4%, and Linear Regression ~28.9%, with R² results nearly identical. This suggests that while the Decision Tree has a slight edge, all three models are competitive depending on the feature set and split used, and that the problem doesn't strongly favor one approach.
+
+Overall, the results demonstrate that **rookie contract statistics are meaningful predictors of long-term All-Star success**, and that relatively simple ML models can forecast career trajectories with solid accuracy on a dataset of this size.
